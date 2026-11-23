@@ -1,5 +1,7 @@
 # eLabFTW Python API Showcase
 
+[eLabFTW REST API v2 Documentation](https://doc.elabftw.net/api/v2/)
+
 Repository dimostrativa delle funzionalità base delle API v2 di **eLabFTW** in Python, organizzata in ordine cronologico dalla prima verifica di connessione fino alla creazione di un esperimento a partire da un template.
 
 ## Prerequisiti
