@@ -38,3 +38,15 @@ ELAB_API_KEY=your_api_key_here
    ```bash
    python 04_create_experiment/create_experiment.py
    ```
+
+5. **`05_get_team_id/get_team_id.py`**  
+   Interroga `GET /api/v2/users/me` per recuperare il profilo dell'utente autenticato e stampare l'ID e il nome dei team a cui appartiene.
+   ```bash
+   python 05_get_team_id/get_team_id.py
+   ```
+
+6. **`06_create_team_experiment/create_team_experiment.py`**  
+   Recupera dinamicamente l'ID del team `"Axial Lab"`, carica `03_prepare_experiment/prepared_experiment.json` e prepara/invia la richiesta `POST /api/v2/experiments` con lettura aperta al team (`canread`) e scrittura riservata al creatore (`canwrite`). Include `CREATE_EXPERIMENT` per eseguire il dry-run.
+   ```bash
+   python 06_create_team_experiment/create_team_experiment.py
+   ```
