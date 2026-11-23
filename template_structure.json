@@ -1,0 +1,133 @@
+{
+    "id": 6,
+    "title": "IV_K2470",
+    "groups": [
+        {
+            "id": 1,
+            "name": "Sample information"
+        },
+        {
+            "id": 2,
+            "name": "Instrument configuration"
+        },
+        {
+            "id": 3,
+            "name": "Measurement parameters"
+        },
+        {
+            "id": 4,
+            "name": "Measurement Results"
+        }
+    ],
+    "extra_fields": {
+        "NPLC": {
+            "type": "number",
+            "unit": "",
+            "units": [],
+            "value": "",
+            "group_id": 3,
+            "position": 5
+        },
+        "V_Step": {
+            "type": "number",
+            "unit": "",
+            "units": [],
+            "value": "",
+            "group_id": 3,
+            "position": 3
+        },
+        "V_Stop": {
+            "type": "number",
+            "unit": "",
+            "units": [],
+            "value": "",
+            "group_id": 3,
+            "position": 2
+        },
+        "V_Start": {
+            "type": "number",
+            "unit": "",
+            "units": [],
+            "value": "",
+            "group_id": 3,
+            "position": 1
+        },
+        "N_Sweeps": {
+            "type": "number",
+            "unit": "",
+            "units": [],
+            "value": "",
+            "group_id": 3,
+            "position": 6
+        },
+        "Operator": {
+            "type": "text",
+            "value": "",
+            "group_id": 1,
+            "position": 2
+        },
+        "Data_File": {
+            "type": "text",
+            "value": "",
+            "group_id": 4,
+            "position": 1
+        },
+        "Sample_ID": {
+            "type": "text",
+            "value": "",
+            "group_id": 1,
+            "position": 0
+        },
+        "Connection": {
+            "type": "text",
+            "value": "",
+            "group_id": 2,
+            "position": 3
+        },
+        "Instrument": {
+            "type": "text",
+            "value": "",
+            "group_id": 2,
+            "position": 0
+        },
+        "Sweep_Type": {
+            "type": "text",
+            "value": "",
+            "group_id": 3,
+            "position": 0
+        },
+        "Device_Type": {
+            "type": "text",
+            "value": "",
+            "group_id": 1,
+            "position": 1
+        },
+        "I_Compliance": {
+            "type": "number",
+            "unit": "",
+            "units": [],
+            "value": "",
+            "group_id": 3,
+            "position": 4
+        },
+        "Instrument_ID": {
+            "type": "text",
+            "value": "",
+            "group_id": 2,
+            "position": 1
+        },
+        "Measurement_Mode": {
+            "type": "text",
+            "value": "",
+            "group_id": 2,
+            "position": 2
+        },
+        "Measurement_Status": {
+            "type": "text",
+            "value": "",
+            "group_id": 4,
+            "position": 0
+        }
+    },
+    "body_html": "<h1>I(V) Measurement – Keithley 2470</h1>\n<h2>1. Measurement objective</h2>\n<p>Electrical current-voltage characterization of the selected sample.</p>\n<h2>2. Experimental setup</h2>\n<p>Instrument: Keithley 2470</p>\n<p>Measurement configuration: Source Voltage / Measure Current.</p>\n<h2>3. Measurement procedure</h2>\n<ol>\n<li>\n<p>Connect the sample to the Keithley 2470.</p>\n</li>\n<li>\n<p>Verify electrical connections and instrument configuration.</p>\n</li>\n<li>\n<p>Set voltage sweep parameters and current compliance.</p>\n</li>\n<li>\n<p>Perform forward voltage sweep (V_Start → V_Stop).</p>\n</li>\n<li>\n<p>Perform backward voltage sweep (V_Stop → V_Start).</p>\n</li>\n<li>\n<p>Save the acquired current-voltage data.</p>\n</li>\n</ol>\n<h2>4. Data and results</h2>\n<p>Raw data file: see attached CSV file.</p>\n<h2>5. Experimental notes</h2>\n<p>[Add relevant observations, anomalies or additional information.]</p>"
+}
