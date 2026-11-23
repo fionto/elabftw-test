@@ -1,9 +1,11 @@
+from pathlib import Path
 from dotenv import load_dotenv  # Permette di caricare API key definita nel file .env
 import os  # Permette di leggere le variabili d'ambiente
 import requests  # Permette di effettuare richieste HTTP verso le API di eLabFTW
 
-# Carica le variabili dal file .env
-load_dotenv()
+# Carica le variabili dal file .env nella root della repository
+ROOT_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(ROOT_DIR / ".env")
 
 # Configurazione del server
 server_url = os.getenv("ELAB_URL")

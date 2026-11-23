@@ -1,10 +1,15 @@
 import os
 import json
+from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Directory paths
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = SCRIPT_DIR.parent
+
+# Load environment variables from repository root
+load_dotenv(ROOT_DIR / ".env")
 
 # Server configuration
 server_url = os.getenv("ELAB_URL")
@@ -80,8 +85,9 @@ output = {
 print("\n=== TEMPLATE DETAILS ===")
 print(json.dumps(output, indent=4, ensure_ascii=False))
 
-# 8. Save structured JSON file
-with open("template_structure.json", "w", encoding="utf-8") as f:
+# 8. Save structured JSON file in the script's directory
+output_file = SCRIPT_DIR / "template_structure.json"
+with open(output_file, "w", encoding="utf-8") as f:
     json.dump(output, f, indent=4, ensure_ascii=False)
 
-print("\nStructure saved to template_structure.json")
+print(f"\nStructure saved to {output_file}")

@@ -1,11 +1,16 @@
 
 import os
 import json
+from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Directory paths
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = SCRIPT_DIR.parent
+
+# Load environment variables from repository root
+load_dotenv(ROOT_DIR / ".env")
 
 # Server configuration
 server_url = os.getenv("ELAB_URL")
@@ -25,8 +30,9 @@ headers = {
 # Safety switch: set True to create the experiment
 CREATE_EXPERIMENT = True
 
-# Load prepared experiment
-with open("prepared_experiment.json", "r", encoding="utf-8") as f:
+# Load prepared experiment from step 03
+input_file = ROOT_DIR / "03_prepare_experiment" / "prepared_experiment.json"
+with open(input_file, "r", encoding="utf-8") as f:
     prepared = json.load(f)
 
 # Build API payload

@@ -1,11 +1,16 @@
 
 import os
 import json
+from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Directory paths
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = SCRIPT_DIR.parent
+
+# Load environment variables from repository root
+load_dotenv(ROOT_DIR / ".env")
 
 # Server configuration
 server_url = os.getenv("ELAB_URL")
@@ -76,9 +81,10 @@ output = {
     "body_html": template.get("body_html", ""),
 }
 
-# Save prepared experiment
-with open("prepared_experiment.json", "w", encoding="utf-8") as f:
+# Save prepared experiment in the script's directory
+output_file = SCRIPT_DIR / "prepared_experiment.json"
+with open(output_file, "w", encoding="utf-8") as f:
     json.dump(output, f, indent=4, ensure_ascii=False)
 
 print("Experiment prepared successfully!")
-print("Output saved to prepared_experiment.json")
+print(f"Output saved to {output_file}")
