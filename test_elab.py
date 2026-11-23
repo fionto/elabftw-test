@@ -1,6 +1,6 @@
-import os
-import requests
-from dotenv import load_dotenv
+from dotenv import load_dotenv  # Permette di caricare API key definita nel file .env
+import os  # Permette di leggere le variabili d'ambiente
+import requests  # Permette di effettuare richieste HTTP verso le API di eLabFTW
 
 # Carica le variabili dal file .env
 load_dotenv()
@@ -9,6 +9,7 @@ load_dotenv()
 server_url = os.getenv("ELAB_URL")
 api_key = os.getenv("ELAB_API_KEY")
 
+# Controlla che le variabili di ambiente siano popolate
 if not server_url or not api_key:
     raise ValueError(
         "Controlla ELAB_URL e ELAB_API_KEY nel file .env"
