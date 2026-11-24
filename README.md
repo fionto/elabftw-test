@@ -52,3 +52,13 @@ ELAB_API_KEY=your_api_key_here
    ```bash
    python 06_create_team_experiment/create_team_experiment.py
    ```
+
+7. **`07_dosimetric/`**  
+   Workflow per misure dosimetriche basato sul template `X-RAY_Dosimetric` (`template_id = 8`):
+   - `0701_inspect_template.py`: ispeziona il template `X-RAY_Dosimetric` e salva la struttura in `07_dosimetric/template_structure.json`.
+   - `experiment_metadata.json`: modulo JSON preimpostato con i gruppi e gli `extra_fields` del template da compilare prima dell'upload.
+   - `0702_upload_experiment.py`: legge `07_dosimetric/experiment_metadata.json`, crea l'esperimento (`POST /api/v2/experiments`) con eventuale visibilità di team (`TARGET_TEAM_NAME`) e allega il file dati raw (`DATA_FILE`, es. `.csv` o `.txt`) tramite `POST /api/v2/experiments/{id}/uploads`. Include `CREATE_EXPERIMENT` per il dry-run.
+   ```bash
+   python 07_dosimetric/0701_inspect_template.py
+   python 07_dosimetric/0702_upload_experiment.py
+   ```
