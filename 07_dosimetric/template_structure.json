@@ -1,0 +1,63 @@
+{
+    "id": 8,
+    "title": "X-RAY_Dosimetric",
+    "groups": [
+        {
+            "id": 1,
+            "name": "Operator Information"
+        },
+        {
+            "id": 2,
+            "name": "Sample Information"
+        },
+        {
+            "id": 3,
+            "name": "Measurement Configuration"
+        },
+        {
+            "id": 4,
+            "name": "Instrument Configuration"
+        }
+    ],
+    "extra_fields": {
+        "Material": {
+            "type": "text",
+            "value": "",
+            "group_id": 2,
+            "position": 1
+        },
+        "Operator": {
+            "type": "text",
+            "value": "",
+            "group_id": 1
+        },
+        "Sample_ID": {
+            "type": "text",
+            "value": "",
+            "group_id": 2,
+            "position": 0
+        },
+        "Connection": {
+            "type": "text",
+            "value": "",
+            "group_id": 4,
+            "position": 1
+        },
+        "Instrument_Model": {
+            "type": "text",
+            "value": "",
+            "group_id": 4,
+            "position": 0
+        },
+        "Measurement_Mode": {
+            "type": "select",
+            "value": "I-V_Sweep",
+            "options": [
+                "I-V_Sweep",
+                "Fixed-V_Time"
+            ],
+            "group_id": 3
+        }
+    },
+    "body_html": ""
+}

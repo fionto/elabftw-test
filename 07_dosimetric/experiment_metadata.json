@@ -1,0 +1,67 @@
+{
+    "template_id": 8,
+    "title": "X-RAY_Dosimetric - perov-001",
+    "metadata": {
+        "elabftw": {
+            "extra_fields_groups": [
+                {
+                    "id": 1,
+                    "name": "Operator Information"
+                },
+                {
+                    "id": 2,
+                    "name": "Sample Information"
+                },
+                {
+                    "id": 3,
+                    "name": "Measurement Configuration"
+                },
+                {
+                    "id": 4,
+                    "name": "Instrument Configuration"
+                }
+            ]
+        },
+        "extra_fields": {
+            "Operator": {
+                "type": "text",
+                "value": "Antonello",
+                "group_id": 1
+            },
+            "Sample_ID": {
+                "type": "text",
+                "value": "perov-001",
+                "group_id": 2,
+                "position": 0
+            },
+            "Material": {
+                "type": "text",
+                "value": "perovskite",
+                "group_id": 2,
+                "position": 1
+            },
+            "Measurement_Mode": {
+                "type": "select",
+                "value": "Fixed-V_Time",
+                "options": [
+                    "I-V_Sweep",
+                    "Fixed-V_Time"
+                ],
+                "group_id": 3
+            },
+            "Instrument_Model": {
+                "type": "text",
+                "value": "Keithley_617",
+                "group_id": 4,
+                "position": 0
+            },
+            "Connection": {
+                "type": "text",
+                "value": "GPIB",
+                "group_id": 4,
+                "position": 1
+            }
+        }
+    },
+    "body_html": ""
+}
